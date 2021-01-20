@@ -83,8 +83,7 @@ Use the addFlavor function below to do the following:
 
 
 function addFlavor(array, newFlavor){
-    array.splice(0, 1, newFlavor);
-    return(array);
+    return(array.splice(0, 0, newFlavor));
 }
 
 
