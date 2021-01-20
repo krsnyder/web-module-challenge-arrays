@@ -211,8 +211,18 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-function getRandomFlavors(/*code here*/){
-    /*code here*/
+function getRandomFlavors(arrayOne, arrayTwo, arrayThree, arrayFour){
+    let combo = arrayOne.concat(arrayTwo, arrayThree, arrayFour); //combine all flavor arrays
+    let randomFlavors = []; // declare randomFlavors array
+    let used = []; // building an array to keep track of flavors already used in the new list
+    for (let i = 0; randomFlavors.length < 32; i++ ) {
+        let index = Math.floor(Math.random()*combo.length); // picks a random index in the combo array
+        while (used.includes(index == false)){
+            randomFlavors[i] = combo[index]; // assigns next index of the randomFlavors array to the value at the random index
+        };
+        used.push(index);
+    };
+    return(ranraomFlavors);
 }
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
