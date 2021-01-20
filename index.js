@@ -187,8 +187,13 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
-    /*code here*/
+function getAverageWordLength(array){
+    let chars = 0; // initiate character count
+    for(let i = 0; i < array.length; i++) { // iterate through given array
+        let len = array[i].split(""); // seperate each word i into array of individual chars
+        chars += len.length; // add length of item i to total characters
+    };
+    return (chars/array.length); // returning the average character per item
 }
 
 
